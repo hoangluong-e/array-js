@@ -1,0 +1,86 @@
+1. Alphabetic Sort
+
+Array sort()
+Array reverse()
+Array toSorted() ES2023
+Array toReversed() ES2023
+
+2. Numberic Sort
+
+Numeric Sort
+Random Sort
+Math.min()
+Math.max()
+Home made Min()
+Home made Max()
+
+1. Alphabetic Sort:
+   - Array sort():
+     - Sắp xếp các phần tử của mảng theo thứ tự chữ cái (Unicode).
+     ```javascript
+     let arr = ['banana', 'apple', 'orange', 'grape'];
+     arr.sort();
+     console.log(arr); // Output: ['apple', 'banana', 'grape', 'orange']
+     ```
+   - Array reverse():
+     - Đảo ngược thứ tự các phần tử trong mảng.
+     ```javascript
+     let arr = ['apple', 'banana', 'grape', 'orange'];
+     arr.reverse();
+     console.log(arr); // Output: ['orange', 'grape', 'banana', 'apple']
+     ```
+   - Array toSorted() và Array toReversed() (Chú ý: Không phải là phương thức chuẩn):
+     - Dường như bạn đang đề cập đến phương thức tùy chỉnh, vì không có `toSorted()` và `toReversed()` trong JavaScript. Để sắp xếp và đảo ngược một mảng, bạn có thể sử dụng `sort()` và `reverse()` như trên.
+
+    -Array toSorted(), Array toReversed()
+    phương thức mới tạo một mảng mới, 
+    giữ nguyên mảng ban đầu, 
+    trong khi phương thức cũ thay đổi mảng ban đầu.
+2. Numberic Sort:
+   - Numeric Sort:
+     - Sắp xếp các phần tử của mảng theo thứ tự số.
+     ```javascript
+     let arr = [40, 100, 1, 5, 25, 10];
+     arr.sort((a, b) => a - b);
+     Nếu a và b là các số, thì a - b trả về một số âm nếu a nhỏ hơn b, 
+     trả về 0 nếu a bằng b, 
+     và trả về một số dương nếu a lớn hơn b.
+
+     console.log(arr); // Output: [1, 5, 10, 25, 40, 100]
+     ```
+   - Random Sort:
+     - Sắp xếp mảng theo thứ tự ngẫu nhiên.
+     ```javascript
+     let arr = [1, 2, 3, 4, 5];
+     arr.sort(() => Math.random() - 0.5);
+     console.log(arr); // Output: Một thứ tự ngẫu nhiên của mảng
+     ```
+   - Math.min() và Math.max():
+     - `Math.min()` trả về giá trị nhỏ nhất trong một số các giá trị.
+     - `Math.max()` trả về giá trị lớn nhất trong một số các giá trị.
+     ```javascript
+     let arr = [1, 2, 3, 4, 5];
+     let minVal = Math.min(...arr);
+     let maxVal = Math.max(...arr);
+     console.log(minVal, maxVal); // Output: 1 5
+     ```
+   - Home made Min() và Home made Max() (Chú ý: Đây là cách tùy chỉnh):
+     - Bạn có thể viết các hàm tùy chỉnh để tìm giá trị nhỏ nhất và lớn nhất trong mảng.
+     ```javascript
+     function homeMadeMin(arr) {
+        let len = arr.length;
+        let min = Infinity;
+        while (len--) {
+            if (arr[len] < min) {
+            min = arr[len];
+            }
+        }
+        return min;
+     }
+
+     function homeMadeMax(arr) {
+       return Math.max(...arr);
+     }
+     let arr = [1, 2, 3, 4, 5];
+     console.log(homeMadeMin(arr), homeMadeMax(arr)); // Output: 1 5
+     ```

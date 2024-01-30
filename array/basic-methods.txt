@@ -1,0 +1,145 @@
+const cars = ["Saab", "Volvo", "BMW"];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+
+arrays is objects
+const person = ["John", "Doe", 46]; 
+
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[6] = "Lemon";
+=> Banana
+Orange
+Apple
+undefined
+undefined
+undefined
+Lemon
+
+Array length
+Array toString()
+Array at()
+Array join()
+Array pop()
+Array push()
+Array shift()
+Array unshift()
+Array delete()
+Array concat()
+Array copyWithin()
+Array flat()
+Array splice()
+Array toSpliced()
+Array slice()
+1. Array length:
+   - Trả về số lượng phần tử trong mảng.
+   ```javascript
+   let arr = [1, 2, 3, 4, 5];
+   console.log(arr.length); // Output: 5
+   ```
+2. Array toString():
+   - Chuyển đổi mảng thành chuỗi bằng cách nối tất cả các phần tử với dấu phẩy.
+   ```javascript
+   let arr = [1, 2, 3];
+   console.log(arr.toString()); // Output: "1,2,3"
+   ```
+3. Array at():
+   - Trả về phần tử ở chỉ mục cụ thể trong mảng.
+   ```javascript
+   let arr = [10, 20, 30];
+   console.log(arr.at(1)); // Output: 20
+   ```
+4. Array join():
+   - Nối tất cả các phần tử của mảng thành chuỗi sử dụng một phân tách đã chỉ định.
+   ```javascript
+    let arr = ['apple', 'orange', 'banana'];
+    console.log(arr.join(', ')); // Output: "apple, orange, banana"
+   ```
+5. Array pop():
+   - Loại bỏ phần tử cuối cùng từ mảng và trả về phần tử đó.
+   ```javascript
+   let arr = [1, 2, 3];
+   let poppedElement = arr.pop();
+   console.log(poppedElement); // Output: 3
+   ```
+6. Array push():
+   - Thêm một hoặc nhiều phần tử vào cuối mảng và trả về độ dài mới.
+   ```javascript
+   let arr = [1, 2, 3];
+   arr.push(4);
+   console.log(arr); // Output: [1, 2, 3, 4]
+   ```
+7. Array shift():
+   - Loại bỏ phần tử đầu tiên từ mảng và trả về phần tử đó.
+   ```javascript
+   let arr = [1, 2, 3];
+   let shiftedElement = arr.shift();
+   console.log(shiftedElement); // Output: 1
+   ```
+8. Array unshift():
+   - Thêm một hoặc nhiều phần tử vào đầu mảng.
+   ```javascript
+   let arr = [2, 3];
+   arr.unshift(0, 1);
+   console.log(arr); // Output: [0, 1, 2, 3]
+   ```
+9. Array delete():
+   - Xóa một phần tử ở chỉ mục cụ thể trong mảng.
+   ```javascript
+   let arr = [1, 2, 3];
+   delete arr[1];
+   console.log(arr); // Output: [1, undefined, 3]
+   ```
+10. Array concat():
+    - Kết hợp hai hoặc nhiều mảng.
+    ```javascript
+    let arr1 = [1, 2];
+    let arr2 = [3, 4];
+    let combinedArr = arr1.concat(arr2);
+    console.log(combinedArr); // Output: [1, 2, 3, 4]
+    ```
+11. Array copyWithin():
+    - Sao chép một chuỗi phần tử trong mảng đến vị trí khác.
+    array.copyWithin(target, start, end);
+    ```javascript
+    let arr = [1, 2, 3, 4, 5];
+    arr.copyWithin(0, 3, 5);
+    console.log(arr); // Output: [4, 5, 3, 4, 5]
+    ```
+12. Array flat():
+    - Làm phẳng một cấu trúc mảng lồng.
+    ```javascript
+    let nestedArray = [1, [2, [3, 4]]];
+    let flatArray = nestedArray.flat(2);
+    console.log(flatArray); // Output: [1, 2, 3, 4]
+    ```
+13. Array splice():
+    - Thay đổi nội dung của mảng bằng cách loại bỏ hoặc thay thế các phần tử hiện có và/hoặc thêm phần tử mới.
+    ```javascript
+    let arr = [1, 2, 3, 4, 5];
+
+    // Loại bỏ 2 phần tử bắt đầu từ vị trí 1 và thêm các phần tử mới
+    arr.splice(1, 2, 'a', 'b', 'c');
+
+    console.log(arr); // Output: [1, 'a', 'b', 'c', 4, 5]
+    ```
+14. Array toSpliced()
+   Sự khác biệt giữa phương thức toSplices() mới và 
+   phương thức splice() cũ là phương thức mới tạo ra một mảng mới, 
+   giữ nguyên mảng ban đầu, 
+   trong khi phương thức cũ thay đổi mảng ban đầu.
+
+    let arr = [1, 2, 3, 4, 5];
+
+    // Loại bỏ 2 phần tử bắt đầu từ vị trí 1 và thêm các phần tử mới
+    const arrn =   arr.splice(1, 2, 'a', 'b', 'c');
+
+15. Array slice():
+    - Trả về một bản sao của một phần của mảng vào một mảng mới.
+    Phương thức slice() tạo một mảng mới.
+    Phương thức slice() không loại bỏ bất kỳ phần tử nào khỏi mảng nguồn.
+    ```javascript
+    let arr = [1, 2, 3, 4, 5];
+    let slicedArr = arr.slice(2, 4);
+    console.log(slicedArr); // Output: [3, 4]
+    ```
